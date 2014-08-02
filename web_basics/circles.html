@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="test/css" href="stylesheets/profile.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans|Roboto|Raleway">
+    <link rel="stylesheet" type="text/css" href="circles.css">
+  <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">-->
+  
+<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAA////AAYGBgATExMA/v7+AAwMDADc3NwABQUFAHBwcAD9/f0ACwsLAO/v7wAEBAQAERERAPz8/AADAwMA+/v7AAkJCQACAgIAKioqAPr6+gCBgYEA7OzsAAEBAQBzc3MAFRUVAA4ODgD5+fkABwcHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVABwAAAAAAAAAAAAAABgVABIXAAAADAAAAAAAABULEwAAEgIAAAAXAAAAAAgBDhIAEgEBBQAAABcAAAABAQQSAAAEEBoAAAAADQAVAQEEAAIXAwAAAAAAAAAAFQEBAQEZEQAAAAAAAAAXFxUBAQEBAQoCEgwAAAAAABIVAQEBAQEBCQEJBwAAAAASFQEBAQEBAQQBAQQPAAAPAAABBAQBAQ4EBAEBFAAAAAAABAsBAQEEFwAEAQECAAAAABUBBAQECQAAAQEBABcAAAAAFQsBAQEODgEbFgAcAAAAAAAVAQEBBAQBBgwAAAAAAAAAAAAVFRUVFQAAAAAAAPgfAADgBwAAwAMAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAIABAADAAwAA4AcAAPg/AAA=" rel="icon" type="image/x-icon" />
+<title>Exercises</title>
+
+</head>
+<div class="wrap">
+  <div class="top">
+<h1>Shonna Dorsey</h1>
+
+
+
+<div class="navigation">
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="circles.html">Exercises</a></li>
+</ul>
+</div>  
+</div>
+
+
+<body>
+
+<p>July 12 2014: This is where I ended up after Web Basics led by <a href="http://www.linkedin.com/pub/mike-reinmiller/36/746/350" target="_blank">Mike Reinmiller</a> at <a href="http://www.turbineflats.org/" target="_blank">Turbine Flats</a>. This week has been challenging, but I think we've all learned a lot. I am excited to learn more. In this exercise, we learned how to use jQuery to perform an action upon an event. In this instance, when you hover over a circle, it changes to the color red and when you click any one of the circles below, it disappears. Give it a try!
+
+
+  <section class="circles">
+    <div class="circle odd">Circle 1</div>
+    <div class="circle even">Circle 2</div>
+    <div class="circle odd">Circle 3</div>
+    <div class="circle even">Circle 4</div>
+  </section>
+
+  <section class="circles">
+    <div class="circle even">Circle 5</div>
+    <div class="circle odd">Circle 6</div>
+    <div class="circle even">Circle 7</div>
+    <div class="circle odd">Circle 8</div>
+  </section>
+<hr>
+<p>July 14 2014: I just wrote my first mini Ruby program using a Ruby box on Nitrous.io. For now, I've included the screenshot below. I'll add an input form here as soon as I learn how to do that!</p>
+<div class="homeimg">
+<a href="http://www.nitrous.io" target="_blank"><img src="images/ruby.png"/></a></div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+$(".circle").on("click", function(){
+    $(this).fadeOut(1500);
+});
+
+  $(".circle").on("mouseover",function(){
+    $(this).css("background","red")
+  });
+
+  $(".circle").on("mouseout", function(){
+    var $theCircle = $(this);
+
+    if($theCircle.hasClass( "odd" )){
+      $(this).css ("background", "black");
+      }
+      else{
+        $(this).css("background", "white");
+
+      }
+  });
+
+</script>
+
+<div class="footer">
+<footer>
+  <p>Shonna Dorsey
+  <br>Contact information: <a href="mailto:shonna@interfaceschool.com">
+  Shonna@interfaceschool.com</a>.</p>
+</footer>
+
+</body>
+
+</html>
